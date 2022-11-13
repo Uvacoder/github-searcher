@@ -14,7 +14,9 @@ export const getUsers = async (data: string): Promise<IUserGithub> => {
   return response.data;
 };
 
-export const getRepositories = async (data: string): Promise<IRepositories> => {
-  const response = await api.get<IRepositories>(`/users/${data}/repos`);
+export const getRepositories = async (
+  data: string
+): Promise<IRepositories[]> => {
+  const response = await api.get<IRepositories[]>(`/users/${data}/repos`);
   return response.data;
 };

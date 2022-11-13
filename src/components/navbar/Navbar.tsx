@@ -2,12 +2,12 @@ import { FC } from "react";
 import { FaSun, FaRegMoon } from "react-icons/fa";
 const Navbar: FC = () => {
   return (
-    <nav className="flex justify-between">
+    <nav className="flex justify-between p-5">
       <div className="nav-logo flex items-center">
         <img
           src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668282611/github-searcher/github-logo_tiqikz.png"
           alt="Github logo"
-          className="w-28"
+          className="w-20"
         />
         <h1 className="text-xl font-medium">
           <span>Github </span>
