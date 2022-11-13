@@ -1,11 +1,15 @@
-import "./App.css";
+import { FC } from "react";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/home/Home";
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <h1>HELLO</h1>
-    </div>
+    <section className=" h-screen w-screen ">
+      <Layout>
+        <Home />
+      </Layout>
+    </section>
   );
-}
+};
 
 export default App;
