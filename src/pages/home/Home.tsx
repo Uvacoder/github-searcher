@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "src/components/navbar/Navbar";
+import RepositorySearcher from "./components/RepositorySearcher";
+import UserSearcher from "./components/UserSearcher";
 
 const Home = () => {
   return (
@@ -11,6 +13,10 @@ const Home = () => {
           className="h-12 w-full  rounded-md border-2 border-solid"
         />
       </section>
+      <h1 className="text-3xl">USERS</h1>
+      <UserSearcher></UserSearcher>
+      <h1 className="text-3xl">REPOS</h1>
+      <RepositorySearcher></RepositorySearcher>
     </section>
   );
 };
