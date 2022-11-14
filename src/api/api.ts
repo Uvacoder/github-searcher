@@ -4,9 +4,6 @@ import IRepositories from "src/interfaces/Repository";
 //Instance global config for axios
 const api = axios.create({
   baseURL: "https://api.github.com",
-  headers: {
-    authorization: "token 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",
-  },
 });
 /**
  * Api call to get github user
