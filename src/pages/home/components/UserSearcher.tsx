@@ -1,71 +1,58 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
+import { useDebounce } from "src/hooks/useDebounce";
 import { getUsers } from "src/api/api";
 import IUserGithub from "src/interfaces/User";
-import { Link } from "react-router-dom";
+import Loader from "src/components/loader/Loader";
+import UserResult from "./UserResult";
+import UserForm from "./UserForm";
+
 const UserSearcher = () => {
   const [query, setQuery] = useState<string>("");
   const [user, setUser] = useState<string>("");
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setUser(query);
-    }, 500);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [query]);
-  const { data, isLoading, isError }: UseQueryResult<IUserGithub, Error> =
-    useQuery<IUserGithub, Error>(["users", user], () => getUsers(user), {
+  useDebounce(query, setUser);
+  const {
+    data,
+    isLoading,
+    isError,
+    isSuccess,
+  }: UseQueryResult<IUserGithub, Error> = useQuery<IUserGithub, Error>(
+    ["users", user],
+    () => getUsers(user),
+    {
       enabled: user ? true : false,
-    });
-
-  if (isLoading) {
-    console.log("Is loading");
-  } else if (isError) {
-    console.log("ERROR");
-  }
+    }
+  );
+  const result = (): JSX.Element | string => {
+    if (query === "") {
+      return "Start searching";
+    } else if (isError) {
+      return "No users found";
+    } else if (isLoading) {
+      return (
+        <div className="flex h-full w-full items-center justify-center">
+          <Loader size={80} />
+        </div>
+      );
+    } else if (isSuccess) {
+      return <UserResult data={data} />;
+    }
+    return "Something went wrong, try again later";
+  };
   return (
-    <section className="searcher-users flex h-full items-center justify-center">
-      <div className="flex h-full w-1/2 flex-col bg-slate-100">
-        <section className="searcher-users__form">
-          <form action="" method="get">
-            <input
-              type="text"
-              className="border"
-              onChange={(e) => setQuery(e.target.value)}
-              value={query}
-            />
-          </form>
+    <section className="searcher-users flex h-full items-center justify-center rounded-lg py-3">
+      <div className="flex h-full w-1/2 flex-col rounded-lg shadow-md shadow-slate-400">
+        <section
+          className="searcher-users__form flex flex-col justify-between rounded-lg bg-slate-100 p-5"
+          style={{ flex: 1 }}
+        >
+          <UserForm query={query} setQuery={setQuery} />
         </section>
-        <section className="searcher-users__result p-8">
-          <section className="result-users__content flex">
-            <div>
-              <img
-                src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668365793/github-searcher/perfil_d0l6zs.jpg"
-                alt=""
-                className="w-64 rounded-full"
-              />
-            </div>
-            <section>
-              <h2>@ivan-escribano</h2>
-              <h3>Ivan Escribano.</h3>
-              <p>
-                I’m Ivan a programmer that loves the MERN stack and wants to
-                keep improving always and learn, I’m a very hard working person
-              </p>
-              <div className="flex flex-col">
-                <span>11 followers</span>
-                <span>15 public repos</span>
-              </div>
-              <p className="text-left">Barcelona , Spain</p>
-            </section>
-          </section>
-          <div className="result-users__links">
-            <Link to={"/repos"} state={"ivan-escribano"}>
-              <button>View repos</button>
-            </Link>
-            <button>View profile</button>
-          </div>
+        <section
+          className="searcher-users__result h-full p-8"
+          style={{ flex: 4 }}
+        >
+          {result()}
         </section>
       </div>
     </section>
