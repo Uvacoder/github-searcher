@@ -40,7 +40,7 @@ const UserSearcher = () => {
     return "Something went wrong, try again later";
   };
   return (
-    <section className="searcher-users flex h-full items-center justify-center rounded-lg py-3">
+    <section className="searcher-users flex h-full items-center justify-center overflow-hidden rounded-lg py-3">
       <div className="flex h-full w-1/2 flex-col rounded-lg shadow-md shadow-slate-400">
         <section
           className="searcher-users__form flex flex-col justify-between rounded-lg bg-slate-100 p-5"

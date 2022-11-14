@@ -28,7 +28,9 @@ const UserResult = ({ data }: Props) => {
         </div>
         <section className="mx-5" style={{ flex: 2 }}>
           <h2 className="mt-2 text-2xl font-medium">@{data?.login}</h2>
-          <h3 className="text-md mt-2">{data?.name}.</h3>
+          <h3 className="text-md mt-2">
+            {data?.name ? data.name : "No name specified"}.
+          </h3>
           <p className="text-md mt-2 overflow-y-auto">
             {data?.bio
               ? data.bio
@@ -51,7 +53,7 @@ const UserResult = ({ data }: Props) => {
         </section>
       </section>
       <div className="result-users__links mt-5 flex justify-between">
-        <a href={data?.html_url}>
+        <a href={data?.html_url} target="_blank">
           <button className="main-button flex items-center">
             <FaUser className="mr-3" /> <span>View profile</span>
           </button>
