@@ -20,6 +20,10 @@
 
 - 🎨 Checkout my design in figma [click here](https://www.figma.com/file/HzV5VO7H78ZtiOasOyokfK/GITHUB-SEARCHER?node-id=0%3A1&t=XnyUj3oRLPOjdz68-1)
 - 📅 Checkout my organization in notion [click here](https://sour-linen-3ee.notion.site/MVST-TECNICHAL-6db9119312f34fd6b210d43d493b1bae)
+
+## Diagram
+![Diagram](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668469409/github-searcher/Sin_t%C3%ADtulo-2022-10-20-1602_hbm46e.png)
+
 ## Tech
 
 - React , React hooks
