@@ -18,7 +18,7 @@ const UserResult = ({ data }: Props) => {
             <img
               src={data?.avatar_url}
               alt="Profile image github"
-              className="w-32 rounded-full md:w-80"
+              className="w-24 rounded-full md:w-80"
             />
           ) : (
             <div className="flex h-52 w-52 items-center justify-center rounded-full bg-slate-300">
@@ -27,11 +27,13 @@ const UserResult = ({ data }: Props) => {
           )}
         </div>
         <section className="mx-5" style={{ flex: 2 }}>
-          <h2 className="mt-2 text-2xl font-medium">@{data?.login}</h2>
-          <h3 className="text-md mt-2">
+          <h2 className="mt-2 text-lg font-medium md:text-2xl">
+            @{data?.login}
+          </h2>
+          <h3 className="md:text-md mt-2 text-sm">
             {data?.name ? data.name : "No name specified"}.
           </h3>
-          <p className="text-md mt-2">
+          <p className="md:text-md mt-2 text-sm">
             {data?.bio
               ? data.bio
               : "The bio it's not specified. Quick tip!! one of the best ways for people to get to know you is to have a bio and explain a bit about yourself and what you like. Github Searcher."}
@@ -52,7 +54,7 @@ const UserResult = ({ data }: Props) => {
           </p>
         </section>
       </section>
-      <div className="result-users__links mx-2 flex justify-between pt-4 md:mx-0 md:mt-5 md:pt-0">
+      <div className="result-users__links mx-2 flex justify-between pt-2 pb-1 md:mx-0 md:mt-5 md:pt-0 md:pb-0">
         <a href={data?.html_url} target="_blank">
           <button className="main-button flex items-center">
             <FaUser className="mr-3" /> <span>View profile</span>
