@@ -2,6 +2,8 @@ import { FaStar, FaCode } from "react-icons/fa";
 import IRepositories from "src/interfaces/Repository";
 import RepositoryLanguage from "./RepositoryLanguage";
 import RepositoryTopics from "./RepositoryTopics";
+import { v4 as uuidv4 } from "uuid";
+
 interface Props {
   repos: IRepositories;
 }
@@ -20,13 +22,13 @@ const Repository = ({ repos }: Props) => {
         <h3 className=" mb-3 text-sm italic">{repos.description}</h3>
         <div className="mb-3 flex text-sm">
           {repos.topics.map((topic) => (
-            <RepositoryTopics topic={topic} />
+            <RepositoryTopics topic={topic} key={uuidv4()} />
           ))}
         </div>
         <div className="mb-3 flex">
-          <p className=" mr-4 flex items-center text-sm">
+          <div className=" mr-4 flex items-center text-sm">
             <RepositoryLanguage language={repos.language} />
-          </p>
+          </div>
           <p className="flex items-center text-sm">
             <FaStar className="mr-2 text-yellow-500" /> {repos.stargazers_count}{" "}
             Stars
