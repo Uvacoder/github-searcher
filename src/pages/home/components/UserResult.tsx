@@ -12,13 +12,13 @@ interface Props {
 const UserResult = ({ data }: Props) => {
   return (
     <div className="flex h-full flex-col">
-      <section className="result-users__content flex h-full items-center overflow-y-auto">
+      <section className="result-users__content flex h-full flex-col items-center  md:flex-row">
         <div className="mr-6" style={{ flex: 1 }}>
           {data?.avatar_url ? (
             <img
               src={data?.avatar_url}
               alt="Profile image github"
-              className="w-80 rounded-full"
+              className="w-32 rounded-full md:w-80"
             />
           ) : (
             <div className="flex h-52 w-52 items-center justify-center rounded-full bg-slate-300">
@@ -31,7 +31,7 @@ const UserResult = ({ data }: Props) => {
           <h3 className="text-md mt-2">
             {data?.name ? data.name : "No name specified"}.
           </h3>
-          <p className="text-md mt-2 overflow-y-auto">
+          <p className="text-md mt-2">
             {data?.bio
               ? data.bio
               : "The bio it's not specified. Quick tip!! one of the best ways for people to get to know you is to have a bio and explain a bit about yourself and what you like. Github Searcher."}
@@ -52,7 +52,7 @@ const UserResult = ({ data }: Props) => {
           </p>
         </section>
       </section>
-      <div className="result-users__links mt-5 flex justify-between">
+      <div className="result-users__links mx-2 flex justify-between pt-4 md:mx-0 md:mt-5 md:pt-0">
         <a href={data?.html_url} target="_blank">
           <button className="main-button flex items-center">
             <FaUser className="mr-3" /> <span>View profile</span>

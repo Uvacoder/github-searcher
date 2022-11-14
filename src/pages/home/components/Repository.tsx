@@ -9,12 +9,12 @@ interface Props {
 }
 const Repository = ({ repos }: Props) => {
   return (
-    <div className=" mx-14 mb-5 flex items-center rounded-md bg-white p-3">
+    <div className=" mx-14 mb-5 flex flex-col items-center rounded-md bg-white p-3 md:flex-row">
       <div style={{ flex: 0.8 }} className="mr-8">
         <img
           src={repos.owner.avatar_url}
           alt="User profile"
-          className="rounded-full"
+          className="w-20 rounded-full"
         />
       </div>
       <div style={{ flex: 3 }}>

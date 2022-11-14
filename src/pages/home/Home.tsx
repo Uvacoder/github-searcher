@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section className="flex w-full flex-col items-center">
-      <section className="w-1/2">
+      <section className="w-full px-5 md:w-1/2">
         <h1 className="text-2xl">Start searching now !!</h1>
         <Link to={"/users"}>
           <input

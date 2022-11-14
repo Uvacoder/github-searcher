@@ -38,8 +38,8 @@ const RepositorySearcher = () => {
   if (!user) navigate("/users");
   return (
     <>
-      <section className="flex h-full w-full justify-center overflow-hidden pb-5">
-        <section className="flex w-2/5 flex-col rounded-lg   shadow-sm shadow-slate-400">
+      <section className="flex h-full w-full justify-center overflow-hidden md:pb-5">
+        <section className="flex flex-col rounded-lg   shadow-sm shadow-slate-400 md:w-2/5 ">
           <RepositoryForm filtersStates={filtersStates} />
           <section
             className="overflow-y-auto  bg-slate-100 py-3"

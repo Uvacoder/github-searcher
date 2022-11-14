@@ -18,8 +18,8 @@ const RepositoryForm = ({ filtersStates }: IFilterStates) => {
           className="h-8 w-full rounded-md border px-10"
         />
       </label>
-      <div className=" flex justify-between">
-        <div className="flex">
+      <div className=" flex flex-col justify-between md:flex-row">
+        <div className="ml-5 flex pb-4 md:ml-0 md:pb-0">
           <Link to={"/users"}>
             <p className="mr-8 flex items-center">
               <FaUser className="mr-1" />
@@ -40,7 +40,7 @@ const RepositoryForm = ({ filtersStates }: IFilterStates) => {
                 filtersStates.setFilterLanguage(e.target.value as languagesType)
               }
               id="languageRepo"
-              className="rounded-md"
+              className="text rounded-md bg-slate-200 text-sm md:p-1 md:text-base"
             >
               <option value="all">all</option>
               <option value="JavaScript">JavaScript</option>
@@ -57,7 +57,7 @@ const RepositoryForm = ({ filtersStates }: IFilterStates) => {
                 filtersStates.setSort(e.target.value as sortType)
               }
               id="sortRepo"
-              className="rounded-md"
+              className="text rounded-md bg-slate-200 text-sm md:p-1 md:text-base"
             >
               <option value="ascending">ascending</option>
               <option value="descendant">descendant</option>
