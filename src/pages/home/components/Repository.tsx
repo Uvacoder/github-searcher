@@ -1,12 +1,13 @@
-import { FaStar, FaCode } from "react-icons/fa";
 import IRepositories from "src/interfaces/Repository";
 import RepositoryLanguage from "./RepositoryLanguage";
 import RepositoryTopics from "./RepositoryTopics";
 import { v4 as uuidv4 } from "uuid";
-
+import { FaStar, FaCode } from "react-icons/fa";
+//props type IRepositories
 interface Props {
   repos: IRepositories;
 }
+//Single repository and data
 const Repository = ({ repos }: Props) => {
   return (
     <div className=" mx-14 mb-5 flex flex-col items-center rounded-md bg-white p-3 md:flex-row">

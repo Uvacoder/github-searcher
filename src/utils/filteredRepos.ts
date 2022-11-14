@@ -1,6 +1,10 @@
 import { IFilterValues } from "src/interfaces/FilterValues";
 import IRepositories from "src/interfaces/Repository";
-
+/**
+ * function to filter repositories by name , language and sorting
+ * @param  {IFilterValues} filterValues
+ * @return Array IRepositories
+ */
 export const filteredRepos = (
   filterValues: IFilterValues
 ): IRepositories[] | undefined => {
@@ -22,6 +26,5 @@ export const filteredRepos = (
         return repoB.name.localeCompare(repoA.name);
       }
     });
-  // .map((repo) => <Repository repos={repo} />);
   return filtered;
 };

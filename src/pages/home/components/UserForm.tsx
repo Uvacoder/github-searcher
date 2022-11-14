@@ -3,6 +3,7 @@ interface Props {
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
 }
+// Component to search usernames query state and setQuery to store data searching before making the petition
 const UserForm = ({ query, setQuery }: Props) => {
   return (
     <>

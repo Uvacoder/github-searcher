@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+//Home component first page
 const Home = () => {
   return (
     <section className="flex w-full flex-col items-center">

@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 interface Props {
   data: IUserGithub | undefined;
 }
+//User result with specified structure
+//params data interface IUserGithub
 const UserResult = ({ data }: Props) => {
   return (
     <div className="flex h-full flex-col">

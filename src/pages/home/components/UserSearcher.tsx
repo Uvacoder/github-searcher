@@ -8,9 +8,13 @@ import UserResult from "./UserResult";
 import UserForm from "./UserForm";
 
 const UserSearcher = () => {
+  //State for query and user
+  //Query makes reference to the state of input
+  //User when debounce finish is the data for request petition
   const [query, setQuery] = useState<string>("");
   const [user, setUser] = useState<string>("");
   useDebounce(query, setUser);
+  //Get petition to get user of github
   const {
     data,
     isLoading,
@@ -23,6 +27,7 @@ const UserSearcher = () => {
       enabled: user ? true : false,
     }
   );
+  //Depending on the response of the print one thing or another
   const result = (): JSX.Element | string => {
     if (query === "") {
       return "Start searching";

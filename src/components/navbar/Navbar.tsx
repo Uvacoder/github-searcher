@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FaSun, FaRegMoon } from "react-icons/fa";
+
 const Navbar: FC = () => {
   return (
     <nav className="flex p-5">

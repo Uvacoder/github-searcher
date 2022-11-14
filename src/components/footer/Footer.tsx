@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+// Footer component
 const Footer: FC = () => {
   return (
     <footer className="main-color__bg flex  flex-col items-center py-3 text-white">

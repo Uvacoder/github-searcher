@@ -1,8 +1,10 @@
 import { languagesType } from "src/types/types";
 
+//Props of component languageType
 interface Props {
   language: languagesType | null;
 }
+//Interface all languages available
 interface ILanguageColor {
   JavaScript: string;
   CSS: string;
@@ -13,7 +15,9 @@ interface ILanguageColor {
   Ruby: string;
 }
 const RepositoryLanguage = ({ language }: Props) => {
+  //If no language specified general type
   const languageTypes = language ?? "General";
+  //bg-color according to the type
   const languageColor: ILanguageColor = {
     JavaScript: "bg-yellow-400",
     CSS: "bg-orange-400",

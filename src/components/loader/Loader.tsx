@@ -1,8 +1,9 @@
-import React from "react";
 import { Jelly } from "@uiball/loaders";
+import { FC } from "react";
 interface Props {
   size: number;
 }
+// Loader waiting to Api response
 const Loader = ({ size }: Props) => {
   return (
     <div>

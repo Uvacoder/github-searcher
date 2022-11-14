@@ -1,7 +1,9 @@
 import { IFilterStates } from "src/interfaces/FilterStates";
-import { FaUser, FaLaptopCode, FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { languagesType, sortType } from "src/types/types";
+import { Link } from "react-router-dom";
+import { FaUser, FaLaptopCode, FaSearch } from "react-icons/fa";
+//Component dedicated for the repository search, inputs , select etc...
+//Filter states reference to all values needed to this form to work
 const RepositoryForm = ({ filtersStates }: IFilterStates) => {
   return (
     <section

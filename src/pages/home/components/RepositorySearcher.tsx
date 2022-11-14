@@ -1,26 +1,30 @@
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import IRepositories from "src/interfaces/Repository";
 import { getRepositories } from "src/api/api";
-import { useLocation, useNavigate } from "react-router-dom";
-import Repository from "./Repository";
-import { useState } from "react";
+import IRepositories from "src/interfaces/Repository";
+import { IFilterValues } from "src/interfaces/FilterValues";
 import { languagesType, sortType } from "src/types/types";
 import RepositoryForm from "./RepositoryForm";
-import { IFilterValues } from "src/interfaces/FilterValues";
-import { filteredRepos } from "src/utils/filteredRepos";
+import Repository from "./Repository";
 import Loader from "src/components/loader/Loader";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { filteredRepos } from "src/utils/filteredRepos";
 import { v4 as uuidv4 } from "uuid";
 
 const RepositorySearcher = () => {
   const navigate = useNavigate();
+  //States for repository searching by name , programming language and sort
   const [filterName, setFilterName] = useState<string>("");
   const [filterLanguage, setFilterLanguage] = useState<languagesType>("all");
   const [sort, setSort] = useState<sortType>("ascending");
+  //State get it from Link
   const { state: user } = useLocation();
+  //Query to get users
   const { data, isLoading }: UseQueryResult<IRepositories[], Error> = useQuery<
     IRepositories[],
     Error
   >(["repositories", user], () => getRepositories(user));
+  //Objects to pass and isolate components more reusable and maintainable
   const filtersStates = {
     filterName,
     setFilterName,

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import RepositorySearcher from "src/pages/home/components/RepositorySearcher";
 import UserSearcher from "src/pages/home/components/UserSearcher";
 import Home from "src/pages/home/Home";
+// Routing of the page
 const Router = () => {
   return (
     <Routes>

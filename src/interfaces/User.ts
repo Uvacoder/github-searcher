@@ -1,3 +1,4 @@
+//Interface for Api response of Users Github
 interface IUserGithub {
   login: string;
   id: number;

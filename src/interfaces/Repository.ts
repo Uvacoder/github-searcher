@@ -1,3 +1,4 @@
+// Interface for Api response repositories
 export interface IRepositories {
   id: number;
   node_id: string;
@@ -79,7 +80,7 @@ export interface IRepositories {
   watchers: number;
   default_branch: string;
 }
-
+//Interface for object Owner inside IRepositories
 export interface Owner {
   login: string;
   id: number;
