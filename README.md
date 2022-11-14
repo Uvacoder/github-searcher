@@ -1,82 +1,103 @@
-# Project Name
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
+# Github Searcher
+
+🔎This project is about an application that allows us to search for users and the repositories associated with these users.
+
+💡 This project is focused on being able to provide the user with an easy-to-use interface with a beautiful and responsive design. Start conecting with  users and their repositories in an easy way.
 
 
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+> 🌐 Live demo [_here_](https://github-searcher-ivan.netlify.app/).
+
+![Logo](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668282611/github-searcher/github-logo_tiqikz.png)
+## Demo
+
+#### Desktop demo
+![desktop demo](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668465911/github-searcher/desktop_y5kggs.gif)
+
+#### Responsive demo
+![Responsive demo](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668466318/github-searcher/mobile_ivujz9.gif)
+## Resources
+
+- 🎨 Checkout my design in figma [click here](https://www.figma.com/file/HzV5VO7H78ZtiOasOyokfK/GITHUB-SEARCHER?node-id=0%3A1&t=XnyUj3oRLPOjdz68-1)
+- 📅 Checkout my organization in notion [click here](https://sour-linen-3ee.notion.site/MVST-TECNICHAL-6db9119312f34fd6b210d43d493b1bae)
+## Tech
+
+- React , React hooks
+- TailwindCSS
+- TypeScript
+- TanStack Query
+- react-router-dom
+- Axios
+- Github API
+- Netlify
+- Postman
+- Figma
+- Vite 
 
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+
+- Search users Github.
+- Search repositories associated with a user.
+- Filter reposiories by name , language and sort
 
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
 
 
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+## Run Locally
 
+Clone the project
 
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+```bash
+  git clone https://github.com/ivan-escribano/github-searcher.git
+```
 
-`write-your-code-here`
+Go to the project directory, if you are not
 
+```bash
+  cd github-searcher
+```
 
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Install dependencies
 
+```bash
+  npm install
+```
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+Start the server
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+```bash
+  npm run dev
+```
 
 
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+## Improvement
+
+Room for improvement and next steps:
+- Add test cases with Jest.
+- Work with GraphQL.
+- Add a dark mode.
+- Filter by topics.
+- Add animations with Framer.
+
+🔝Feedback: 
+This project was quite interesting to carry out, the truth is that beyond the result it is always good to practice and take on challenges. Although the truth is this week has been very busy with the completion of the master's degree, I am happy with the result and the work done from the beginning to the end. Gonna keep also with the project to improve.
+## Authors & Credits
+
+#### Contact me
+- [Github](https://github.com/ivan-escribano)
+- [Linkedin](https://github.com/ivan-escribano)
+- [Personal website](https://personal-website-ivan-escribano.vercel.app)
+- [E-commerce project](https://react-ecommerce-mobile-ivan.vercel.app/)
+
+
+#### Credits
+This project was inspired by the motivation to improve and to be better, always believe and dream big.
+
+*"The sky is only the beginning"*
+
+
