@@ -6,7 +6,7 @@
 💡 This project is focused on being able to provide the user with an easy-to-use interface with a beautiful and responsive design. Start conecting with  users and their repositories in an easy way.
 
 
-> 🌐 Live demo [_here_](https://github-searcher-ivan.netlify.app/).
+> 🌐 Live demo [_here_](https://github-searcher-ivan-escribano.vercel.app).
 
 ![Logo](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668282611/github-searcher/github-logo_tiqikz.png)
 ## Demo
