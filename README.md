@@ -1,7 +1,7 @@
 
 # Github Searcher
 
-🔎This project is about an application that allows us to search for users and the repositories associated with these users.
+🔎This project is about an application that allows users to search for users in Github and the repositories associated with these users.
 
 💡 This project is focused on being able to provide the user with an easy-to-use interface with a beautiful and responsive design. Start conecting with  users and their repositories in an easy way.
 
